@@ -48,7 +48,39 @@ const products = [
     price: 45,
     stock: 50,
     description: "Savon noir traditionnel à l'huile d'olive et à l'eucalyptus."
-  }
+  },
+  {
+    id: 7,
+    name: "Plateau en zellige de Fes",
+    category: "Poterie",
+    price: 280,
+    stock: 4,
+    description: "Plateau artisanal en zellig fais maison."
+  },
+  {
+	id: 8,
+    name: "Tajine décoré de Safi",
+    category: "Poterie",
+    price: 190,
+    stock: 10,
+    description: "Tajine décoré de Safi"
+  },
+  {
+  id: 9,
+  name: "Pouf en cuir de Marrakech",
+  category: "Maroquinerie",
+  price: 350,
+  stock: 6,
+  description: "Pouf rond en cuir brodé à la main, livré non rembourré."
+ },
+ {
+  id: 10,
+  name: "Babouches brodées de Fès",
+  category: "Maroquinerie",
+  price: 220,
+  stock: 12,
+  description: "Babouches brodées à la main, en cuir de Fès."
+}
 ];
 
 module.exports = products;

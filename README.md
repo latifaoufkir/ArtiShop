@@ -6,7 +6,7 @@ Boutique en ligne de produits artisanaux marocains. Projet fil rouge du cours De
 
 - Catalogue de produits, avec filtre par catégorie
 - Fiche produit
-- Panier : ajout, suppression, calcul du total, contrôle du stock
+- Panier : ajout, suppression, calcul du total, contrôle du stock.
 
 ## Prérequis
 
@@ -38,10 +38,11 @@ npm test
 | GET | `/api/products` | Liste des produits (`?category=Poterie` pour filtrer) |
 | GET | `/api/products/:id` | Détail d'un produit |
 | GET | `/api/cart` | Contenu du panier et total |
+| GET | /api/delivery?city=Rabat | Frais de livraison pour une ville |
 | POST | `/api/cart` | Ajoute un produit : `{ "productId": 1, "quantity": 2 }` |
 | DELETE | `/api/cart/:productId` | Retire un produit du panier |
 
-## Structure
+## Structure du projet
 
 ```
 artishop/
@@ -60,3 +61,4 @@ artishop/
 
 Le panier est gardé en mémoire : il est vidé à chaque redémarrage du serveur.
 Recette QA
+Recette(QA)
