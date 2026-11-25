@@ -1,0 +1,63 @@
+EX4:
+1- 
+git branch -> seulement les branches locales (main)
+git branch -a -> locales + remote-tracking 
+
+-------------
+PS C:\Users\elbid\ArtiShop> git fetch
+PS C:\Users\elbid\ArtiShop> git branch
+* main
+PS C:\Users\elbid\ArtiShop> git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/feature/livraison
+  remotes/origin/feature/promo
+  remotes/origin/main
+  remotes/upstream/HEAD -> upstream/main
+  remotes/upstream/feature/livraison
+  remotes/upstream/feature/promo
+  remotes/upstream/main
+
+  -------------------------
+
+2-
+git switch --> refuse head reste sur main
+
+-------------
+PS C:\Users\elbid\ArtiShop> git switch origin/feature/livraison
+fatal: a branch is expected, got remote branch 'origin/feature/livraison'
+hint: If you want to detach HEAD at the commit, try again with the --detach option.
+-------------------------------
+
+git checkout --> detached head car le head pointe sur le commit pas sur une branch
+
+-------------------------
+PS C:\Users\elbid\ArtiShop> git checkout  origin/feature/livraison
+Note: switching to 'origin/feature/livraison'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 5333466 feat(livraison): frais de livraison par ville
+PS C:\Users\elbid\ArtiShop> git status
+HEAD detached at origin/feature/livraison
+nothing to commit, working tree clean
+
+----------------------------------
+
+git switch feature/livraison --> git cree automatiquement la branche local fearture/livraison qui suite origin/fearture/livraison
+
+
+Risque du commit en detached HEAD cest le commit n'appartient a aucune branch , si en change de branche sera supprime par le garbage collector

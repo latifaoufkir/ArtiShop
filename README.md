@@ -40,6 +40,7 @@ npm test
 | GET | `/api/cart` | Contenu du panier et total |
 | POST | `/api/cart` | Ajoute un produit : `{ "productId": 1, "quantity": 2 }` |
 | DELETE | `/api/cart/:productId` | Retire un produit du panier |
+| GET | /api/delivery?city=Rabat | Frais de livraison pour une ville |
 
 ## Structure
 
@@ -59,4 +60,4 @@ artishop/
 ```
 
 Le panier est gardé en mémoire : il est vidé à chaque redémarrage du serveur.
-Recette QA
+Recette (QA)
